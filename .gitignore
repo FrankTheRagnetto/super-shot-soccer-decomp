@@ -1,0 +1,19 @@
+# No game data ever goes in this repo
+*.bin
+*.BIN
+*.cue
+*.CUE
+*.iso
+*.img
+*.chd
+*.exe
+*.EXE
+*.ovr
+*.OVR
+*.str
+*.STR
+work/
+out/
+__pycache__/
+.venv/
+.cache/

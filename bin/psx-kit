@@ -1,0 +1,7 @@
+#!/bin/sh
+# psx-kit launcher: runs the package from this repo, wherever it is called from.
+# Uses the kit's own .venv (splat, ziglang) when present, plain python3 otherwise.
+here="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
+py=python3
+[ -x "$here/.venv/bin/python" ] && py="$here/.venv/bin/python"
+PYTHONPATH="$here${PYTHONPATH:+:$PYTHONPATH}" exec "$py" -m psxkit.cli "$@"

@@ -1,0 +1,12 @@
+typedef unsigned char u8; typedef int s32;
+typedef struct { u8 pad[3]; u8 x[0x14]; } E;
+extern E D_800FA258[];
+s32 func_80019B30(s32 arg0, s32 arg1) {
+    s32 i;
+    for (i = 1; i < 0xB; i++) {
+        if (arg1 == D_800FA258[arg0].x[i]) {
+            return 0;
+        }
+    }
+    return -1;
+}
