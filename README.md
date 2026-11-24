@@ -53,6 +53,9 @@ bin/psx-kit split "/path/to/Super Shot Soccer (USA).cue" --disc /SLUS_014.64 /tm
 
 `split` exits 0 only if its own rebuild of the executable has the same sha1 as the one on your disc,
 so a different revision of the game is caught before any C is compared.
+On the first `split` the toolkit downloads the public PsyQ signature list from
+[ps1-recomp](https://github.com/PS1Recomp/ps1-recomp) into `.cache/` (ignored by git) to name Sony's library
+functions; `--no-sony` skips it.
 
 ## How the C was written
 
